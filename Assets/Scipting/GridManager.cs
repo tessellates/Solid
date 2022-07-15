@@ -14,13 +14,9 @@ public class GridManager : MonoBehaviour
 
     private void Start()
     {
-        transformed_width = (float)width/2;    
-        transformed_height = (float)height/2;
         generateGrid();
         generateBounds();
         moveCamera();
-        var spawnedTile = Instantiate(tilePrefab, new Vector3(-2 , -2), Quaternion.identity);
-
     }
 
 
@@ -66,6 +62,8 @@ public class GridManager : MonoBehaviour
 
     private void moveCamera()
     {
+        transformed_width = (float)width/2;    
+        transformed_height = (float)height/2;
         cam.transform.position = new Vector3( transformed_width - 0.5f, transformed_height - 0.5f, -10 );
     }
 }
