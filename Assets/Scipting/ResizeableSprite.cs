@@ -8,7 +8,7 @@ public class ResizeableSprite : MonoBehaviour
 
     private void Start()
     {
-        ResizeByPixel( 170 );
+        //ResizeByPixel( 256 );
     }
 
     public void ResizeByPixel(int pixels)
@@ -16,7 +16,6 @@ public class ResizeableSprite : MonoBehaviour
         var _sprite = _renderer.sprite;
         if ( !_sprite )
         {
-            Debug.Log( "triggered" );
             _sprite = GetComponent<Sprite>();
         }
         Debug.Log( _sprite.rect );
@@ -26,5 +25,20 @@ public class ResizeableSprite : MonoBehaviour
         Debug.Log( scaleFactorHeight );
         Debug.Log( scaleFactorWidth );
         gameObject.transform.localScale = new Vector3(scaleFactorWidth * gameObject.transform.localScale.x, scaleFactorHeight * gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+    }
+    /* not needed
+    public void setColliderBox()
+    {
+        if ( gameObject.GetComponent<BoxCollider2D>() )
+        {
+            Vector2 S = gameObject.GetComponent<SpriteRenderer>().sprite.bounds.size;
+            gameObject.GetComponent<BoxCollider2D>().size = S;
+            gameObject.GetComponent<BoxCollider2D>().offset = new Vector2 ((S.x / 2), 0);
+        }
+    } */
+
+    public void flipOnX ( bool doFlip )
+    {
+        _renderer.flipX = doFlip;
     }
 }

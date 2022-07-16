@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5967295986825056044}
   - component: {fileID: 5967295986825056019}
-  - component: {fileID: 5967295986825056045}
   - component: {fileID: -3110251885443568406}
+  - component: {fileID: 2793385031060678582}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -86,21 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5967295986825056045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5967295986825056018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4644487badf748ad98a900de284a6e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseColor: {r: 0.20392157, g: 0.19607843, b: 0.19607843, a: 1}
-  offColor: {r: 0.19607843, g: 0.19607843, b: 0.20392157, a: 1}
-  _renderer: {fileID: 0}
 --- !u!114 &-3110251885443568406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,4 +98,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fd887b6e30e743fbbf0adb2bc0e0077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderer: {fileID: 0}
+  _renderer: {fileID: 5967295986825056019}
+--- !u!114 &2793385031060678582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5967295986825056018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea95d6deff6114d2ba2e417aaec1ef5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ms: 5
+  movePoint: {fileID: 363068481215927168, guid: 567ef19fd20934e538636f5aaa87516f, type: 3}
+  colliderMask:
+    serializedVersion: 2
+    m_Bits: 1
